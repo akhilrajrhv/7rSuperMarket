@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-12T08:11:12 IST" name="Default suite" finished-at="2024-08-12T08:11:20 IST" duration-ms="7466">
+  <suite started-at="2024-08-16T20:47:44 IST" name="Default suite" finished-at="2024-08-16T20:47:54 IST" duration-ms="10170">
     <groups>
     </groups>
-    <test started-at="2024-08-12T08:11:12 IST" name="Default test" finished-at="2024-08-12T08:11:20 IST" duration-ms="7466">
-      <class name="testscripts.LoginPageTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.LoginPageTest@206a70ef]" started-at="2024-08-12T08:11:12 IST" name="beforeMethod" finished-at="2024-08-12T08:11:18 IST" duration-ms="5947" status="PASS">
+    <test started-at="2024-08-16T20:47:44 IST" name="Default test" finished-at="2024-08-16T20:47:54 IST" duration-ms="10170">
+      <class name="testscripts.ManageFooterPageTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.ManageFooterPageTest@206a70ef]" started-at="2024-08-16T20:47:44 IST" name="beforeMethod" finished-at="2024-08-16T20:47:50 IST" duration-ms="5637" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyEnterValidUsernameAndPassword()[pri:0, instance:testscripts.LoginPageTest@206a70ef]" started-at="2024-08-12T08:11:18 IST" name="verifyEnterValidUsernameAndPassword" finished-at="2024-08-12T08:11:20 IST" duration-ms="1453" status="PASS">
+        <test-method signature="verifyEditFooterDetails()[pri:0, instance:testscripts.ManageFooterPageTest@206a70ef]" started-at="2024-08-16T20:47:50 IST" name="verifyEditFooterDetails" finished-at="2024-08-16T20:47:54 IST" duration-ms="4471" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyEnterValidUsernameAndPassword -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.LoginPageTest@206a70ef]" started-at="2024-08-12T08:11:20 IST" name="afterMethod" finished-at="2024-08-12T08:11:20 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyEditFooterDetails -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.ManageFooterPageTest@206a70ef]" started-at="2024-08-16T20:47:54 IST" name="afterMethod" finished-at="2024-08-16T20:47:54 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testscripts.LoginPageTest -->
+      </class> <!-- testscripts.ManageFooterPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

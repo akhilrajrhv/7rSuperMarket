@@ -18,7 +18,8 @@ public Login(WebDriver driver) {
 @FindBy(xpath="//input[@name='password']") WebElement password;
 @FindBy(xpath="//button[@class='btn btn-dark btn-block']") WebElement sigin;
 @FindBy(xpath="//p[text()='Dashboard']") WebElement dashboard;
-
+@FindBy(xpath="//button[@class='close']") WebElement alertclose;
+@FindBy(xpath="//label[@for='remember']") WebElement remember;
 
 public void enterValidUsername(String user) {
 	userame.sendKeys(user);
@@ -35,5 +36,13 @@ public void clicLoginbutton() {
 
 public boolean isDashboardDisplayed() {
 	return dashboard.isDisplayed();
+}
+
+public boolean isClosebuttonDisplayed() {
+	return alertclose.isDisplayed();
+}
+
+public boolean isremembermeDisplayed() {
+	return remember.isDisplayed();
 }
 }
