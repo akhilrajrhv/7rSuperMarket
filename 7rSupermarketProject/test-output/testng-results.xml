@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-16T20:47:44 IST" name="Default suite" finished-at="2024-08-16T20:47:54 IST" duration-ms="10170">
+  <suite started-at="2024-08-18T22:40:48 IST" name="Default suite" finished-at="2024-08-18T22:40:57 IST" duration-ms="9663">
     <groups>
     </groups>
-    <test started-at="2024-08-16T20:47:44 IST" name="Default test" finished-at="2024-08-16T20:47:54 IST" duration-ms="10170">
-      <class name="testscripts.ManageFooterPageTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.ManageFooterPageTest@206a70ef]" started-at="2024-08-16T20:47:44 IST" name="beforeMethod" finished-at="2024-08-16T20:47:50 IST" duration-ms="5637" status="PASS">
+    <test started-at="2024-08-18T22:40:48 IST" name="Default test" finished-at="2024-08-18T22:40:57 IST" duration-ms="9663">
+      <class name="testscripts.ManageCategoryPageTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.ManageCategoryPageTest@292b08d6]" started-at="2024-08-18T22:40:48 IST" name="beforeMethod" finished-at="2024-08-18T22:40:52 IST" duration-ms="4585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyEditFooterDetails()[pri:0, instance:testscripts.ManageFooterPageTest@206a70ef]" started-at="2024-08-16T20:47:50 IST" name="verifyEditFooterDetails" finished-at="2024-08-16T20:47:54 IST" duration-ms="4471" status="PASS">
+        <test-method signature="verifyAddCategory()[pri:0, instance:testscripts.ManageCategoryPageTest@292b08d6]" started-at="2024-08-18T22:40:52 IST" name="verifyAddCategory" finished-at="2024-08-18T22:40:57 IST" duration-ms="4997" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyEditFooterDetails -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.ManageFooterPageTest@206a70ef]" started-at="2024-08-16T20:47:54 IST" name="afterMethod" finished-at="2024-08-16T20:47:54 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- verifyAddCategory -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.ManageCategoryPageTest@292b08d6]" started-at="2024-08-18T22:40:57 IST" name="afterMethod" finished-at="2024-08-18T22:40:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testscripts.ManageFooterPageTest -->
+      </class> <!-- testscripts.ManageCategoryPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,5 +1,7 @@
 package testscripts;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -32,6 +34,9 @@ public class ManageFooterPageTest extends BaseClass{
 	  managefooter.clearphonenofield();
 	  managefooter.enterphone(updatephone);
 	  managefooter.clickupdatebutton();
+	  
+	  boolean isfooteralertshow=managefooter.isfooterupdatealertdisplay();
+	  assertTrue(isfooteralertshow, "Failed!! Footer text not updated");
 	
   }
 

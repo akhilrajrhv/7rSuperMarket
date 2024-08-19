@@ -25,7 +25,7 @@ public AdminUsersPage (WebDriver driver) {
 @FindBy(xpath="//input[@id='password']")WebElement password;
 //@FindBy(xpath="//select[@id='user_type']")WebElement usertype;
 @FindBy(xpath="//button[@name='Create']")WebElement savebutton;
-
+@FindBy(xpath="//button[@class='close']")WebElement createalert;
 //Select se =new Select(usertype);
 
 
@@ -54,4 +54,9 @@ public AdminUsersPage (WebDriver driver) {
  public void clicksavebutton() {
 		savebutton.click();
 	}
+ 
+ public boolean isalerttextdisplay() {
+	return createalert.isDisplayed();
+	
+}
 }

@@ -21,6 +21,7 @@ public ManageFooterPage (WebDriver driver) {
 @FindBy(xpath="//input[@id='email']")WebElement emailfield;
 @FindBy(xpath="//input[@id='phone']")WebElement phonefield;
 @FindBy(xpath="//button[@name='Update']")WebElement updatebutton;
+@FindBy(xpath="//div[@class='alert alert-success alert-dismissible' and contains(., 'Footer Text Updated Successfully')]")WebElement successalert;
 
 public void clickmanagefooterlink() {
 	managefooter.click();
@@ -55,6 +56,10 @@ public void enterphone(String phone) {
 
 public void clickupdatebutton() {
 	updatebutton.click();
+}
+
+public boolean isfooterupdatealertdisplay() {
+	return successalert.isDisplayed();
 }
 
 }

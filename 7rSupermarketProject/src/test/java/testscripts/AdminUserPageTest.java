@@ -1,5 +1,7 @@
 package testscripts;
 
+import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.Test;
 
 import pages.AdminUsersPage;
@@ -13,7 +15,7 @@ public class AdminUserPageTest extends BaseClass{
 	  String passwordfield="admin";
 	  String adminusername="Akhil";
 	  String adminpassword="User123";
-	 // String admintype="Admin";
+	
 	  
 	  Login login=new Login(driver);
 	  login.enterValidUsername(Useramefield);
@@ -27,6 +29,10 @@ public class AdminUserPageTest extends BaseClass{
 	  adminuser.enterpassword(adminpassword);
 	  adminuser.selectuser();
 	  adminuser.clicksavebutton();
+	  
+	  
+	  boolean isAlerttextshow=adminuser.isalerttextdisplay();
+	  assertTrue(isAlerttextshow, "Failed!! Admin User Not Created");
 	  
   }
 }
