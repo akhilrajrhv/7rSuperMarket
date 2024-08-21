@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-18T22:40:48 IST" name="Default suite" finished-at="2024-08-18T22:40:57 IST" duration-ms="9663">
+  <suite started-at="2024-08-22T00:00:08 IST" name="Default suite" finished-at="2024-08-22T00:00:20 IST" duration-ms="11355">
     <groups>
     </groups>
-    <test started-at="2024-08-18T22:40:48 IST" name="Default test" finished-at="2024-08-18T22:40:57 IST" duration-ms="9663">
-      <class name="testscripts.ManageCategoryPageTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.ManageCategoryPageTest@292b08d6]" started-at="2024-08-18T22:40:48 IST" name="beforeMethod" finished-at="2024-08-18T22:40:52 IST" duration-ms="4585" status="PASS">
+    <test started-at="2024-08-22T00:00:08 IST" name="Default test" finished-at="2024-08-22T00:00:20 IST" duration-ms="11355">
+      <class name="testscripts.LoginPageTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:09 IST" name="beforeMethod" finished-at="2024-08-22T00:00:12 IST" duration-ms="3359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyAddCategory()[pri:0, instance:testscripts.ManageCategoryPageTest@292b08d6]" started-at="2024-08-18T22:40:52 IST" name="verifyAddCategory" finished-at="2024-08-18T22:40:57 IST" duration-ms="4997" status="PASS">
+        <test-method signature="verifyEnterValidUsernameAndInvalidPassword()[pri:1, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:12 IST" name="verifyEnterValidUsernameAndInvalidPassword" finished-at="2024-08-22T00:00:13 IST" duration-ms="1170" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddCategory -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.ManageCategoryPageTest@292b08d6]" started-at="2024-08-18T22:40:57 IST" name="afterMethod" finished-at="2024-08-18T22:40:57 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyEnterValidUsernameAndInvalidPassword -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:13 IST" name="afterMethod" finished-at="2024-08-22T00:00:13 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testscripts.ManageCategoryPageTest -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:13 IST" name="beforeMethod" finished-at="2024-08-22T00:00:15 IST" duration-ms="1774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyEnterInvalidUsernameAndValidPassword()[pri:2, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:15 IST" name="verifyEnterInvalidUsernameAndValidPassword" finished-at="2024-08-22T00:00:15 IST" duration-ms="423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnterInvalidUsernameAndValidPassword -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:15 IST" name="afterMethod" finished-at="2024-08-22T00:00:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:15 IST" name="beforeMethod" finished-at="2024-08-22T00:00:17 IST" duration-ms="1760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyEnterInvalidUsernameAndInvalidPassword()[pri:3, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:17 IST" name="verifyEnterInvalidUsernameAndInvalidPassword" finished-at="2024-08-22T00:00:17 IST" duration-ms="429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnterInvalidUsernameAndInvalidPassword -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:17 IST" name="afterMethod" finished-at="2024-08-22T00:00:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:17 IST" name="beforeMethod" finished-at="2024-08-22T00:00:19 IST" duration-ms="1785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyEnterValidUsernameAndPassword()[pri:4, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:19 IST" name="verifyEnterValidUsernameAndPassword" finished-at="2024-08-22T00:00:20 IST" duration-ms="599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnterValidUsernameAndPassword -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.LoginPageTest@dd05255]" started-at="2024-08-22T00:00:20 IST" name="afterMethod" finished-at="2024-08-22T00:00:20 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testscripts.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
