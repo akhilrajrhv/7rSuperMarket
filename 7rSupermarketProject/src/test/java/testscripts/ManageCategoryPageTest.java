@@ -2,26 +2,29 @@ package testscripts;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import constants.Constants;
 import pages.Login;
 import pages.ManageCategoryPage;
+import utilities.ExcelUtils;
 import utilities.WaitUtils;
 
 public class ManageCategoryPageTest extends BaseClass {
 
-	@Test(priority=1)
-	public void verifyAddCategory() throws InterruptedException {
+	@Test(priority = 1)
+	public void verifyAddCategory() throws InterruptedException, IOException {
 
-		String Useramefield = "admin";
-		String passwordfield = "admin";
-		String categoryname = "Test Category 1102";
+		String ValidUsername = ExcelUtils.getStringData(1, 0, "CategoryDetail");
+		String Validpassword = ExcelUtils.getStringData(1, 1, "CategoryDetail");
+		String categoryname = ExcelUtils.getStringData(1, 2, "CategoryDetail");
 
 		Login login = new Login(driver);
-		login.enterValidUsername(Useramefield);
-		login.enterValidPassword(passwordfield);
+		login.enterValidUsername(ValidUsername);
+		login.enterValidPassword(Validpassword);
 		login.clicLoginbutton();
 
 		ManageCategoryPage categorypage = new ManageCategoryPage(driver);
@@ -33,12 +36,12 @@ public class ManageCategoryPageTest extends BaseClass {
 		categorypage.pagescrolldown();
 		Thread.sleep(1000);
 		categorypage.clicksavebutton();
-		
-		boolean isCategoryAddAlertShow=categorypage.isCategoryCreatedSuccess();
+
+		boolean isCategoryAddAlertShow = categorypage.isCategoryCreatedSuccess();
 		assertTrue(isCategoryAddAlertShow, Constants.ERROR_MESSAGEFOR_ADDCATEGORY);
 	}
-	
-	//@Test(priority=2)
+
+	// @Test(priority=2)
 	public void verifyEditCategory() throws InterruptedException {
 
 		String Useramefield = "admin";
@@ -55,13 +58,13 @@ public class ManageCategoryPageTest extends BaseClass {
 		categorypage.clickeditbutton();
 		categorypage.clearcategoryfield();
 		categorypage.entercategoryname(editedcategoryname);
-	//	categorypage.selectgroup();
-	//	categorypage.selectimage();
+		// categorypage.selectgroup();
+		// categorypage.selectimage();
 		categorypage.editpagescrolldown();
-		//Thread.sleep(1000);
+		// Thread.sleep(1000);
 		categorypage.clickupdatebutton();
-		
-		boolean isCategoryAddAlertShow=categorypage.isCategoryCreatedSuccess();
+
+		boolean isCategoryAddAlertShow = categorypage.isCategoryCreatedSuccess();
 		assertTrue(isCategoryAddAlertShow, Constants.ERROR_MESSAGEFOR_ADDCATEGORY);
 	}
 }

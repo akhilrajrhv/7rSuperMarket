@@ -19,7 +19,7 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver, this);// Page factory defined
 	}
 
-	@FindBy(xpath = "(//a[@class='small-box-footer'])[5]")
+	@FindBy(xpath = "(//a[@class='small-box-footer'])[3]")
 	WebElement clickcategory;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	WebElement clicknewbutton;
@@ -60,7 +60,6 @@ public class ManageCategoryPage {
 
 	public void selectimage() {
 		//selectimage.sendKeys(filepath);
-		//upload.uploadImage(selectimage, filepath);
 		FileUploadUtils.uploadImage(selectimage, filepath);
 
 	}

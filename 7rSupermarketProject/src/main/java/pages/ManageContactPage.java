@@ -18,7 +18,7 @@ public ManageContactPage (WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);//Page factory defined
 	}
-@FindBy(xpath="(//a[@class='small-box-footer'])[7]")WebElement managecontactlink;
+@FindBy(xpath="(//a[@class='small-box-footer'])[5]")WebElement managecontactlink;
 @FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss']")WebElement editcontactbutoon;
 @FindBy(xpath="//input[@id='phone']")WebElement phonenofield;
 @FindBy(xpath="//input[@id='email']")WebElement emailfield;

@@ -15,7 +15,7 @@ public ManageFooterPage (WebDriver driver) {
 		PageFactory.initElements(driver,this);//Page factory defined
 	}
 
-@FindBy(xpath="(//a[@class='small-box-footer'])[8]")WebElement managefooter;
+@FindBy(xpath="(//a[@class='small-box-footer'])[10]")WebElement managefooter;
 @FindBy(xpath="(//a[@class='btn btn-sm btn btn-primary btncss'])[1]")WebElement editfooterbutton;
 @FindBy(xpath="//textarea[@id='content']")WebElement addressfield;
 @FindBy(xpath="//input[@id='email']")WebElement emailfield;

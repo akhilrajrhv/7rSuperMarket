@@ -17,7 +17,7 @@ public class ManageSubCategory {
 		PageFactory.initElements(driver, this);// Page factory defined
 	}
 
-	@FindBy(xpath = "(//a[@class='small-box-footer'])[6]")
+	@FindBy(xpath = "(//a[@class='small-box-footer'])[4]")
 	WebElement subcategorylink;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	WebElement newbutton;
