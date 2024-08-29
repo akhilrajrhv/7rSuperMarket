@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscripts.ManageSubCategoryTest">
+      <class name="testscripts.LoginPageTest">
         <methods>
+          <include name="verifyEnterInvalidUsernameAndInvalidPassword"/>
           <include name="afterMethod"/>
-          <include name="verifyAddSubcategory"/>
-          <include name="beforeMethod"/>
+          <include name="verifyEnterValidUsernameAndValidPassword"/>
+          <include name="verifyEnterValidUsernameAndInvalidPassword"/>
+          <include name="verifyEnterInvalidUsernameAndValidPassword"/>
+          <include name="initializeMethod"/>
         </methods>
-      </class> <!-- testscripts.ManageSubCategoryTest -->
+      </class> <!-- testscripts.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

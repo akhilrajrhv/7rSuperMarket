@@ -5,6 +5,9 @@ import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.openqa.selenium.Credentials;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import constants.Constants;
@@ -12,12 +15,22 @@ import pages.Login;
 import utilities.ExcelUtils;
 
 public class LoginPageTest extends BaseClass {
+	
+	@DataProvider(name="credentials")
+	public Object[][] testData() {// data provider
+		Object[][] input = new Object[2][2];
+		//input[0][0] = "admin";
+		//input[0][1] = "admin";
+		input[1][0] = "admin@123";
+		input[1][1] = "admin123";
+		return input;
+	}
+	
+	@Test(priority = 1,dataProvider = "credentials")
+	public void verifyEnterValidUsernameAndInvalidPassword(String ValidUsername,String Invalidpassword) throws IOException {
 
-	@Test(priority = 1)
-	public void verifyEnterValidUsernameAndInvalidPassword() throws IOException {
-
-		String ValidUsername = ExcelUtils.getStringData(1, 0, "LoginDetails");
-		String Invalidpassword = ExcelUtils.getStringData(1, 1, "LoginDetails");
+		//String ValidUsername = ExcelUtils.getStringData(1, 0, "LoginDetails");
+		//String Invalidpassword = ExcelUtils.getStringData(1, 1, "LoginDetails");
 
 		Login login = new Login(driver);
 		login.enterValidUsername(ValidUsername);
@@ -31,10 +44,11 @@ public class LoginPageTest extends BaseClass {
 	}
 
 	@Test(priority = 2)
-	public void verifyEnterInvalidUsernameAndValidPassword() throws IOException {
+	@Parameters({"Username","Password"})
+	public void verifyEnterInvalidUsernameAndValidPassword(String InValidUsername,String Validpassword) throws IOException {
 
-		String InValidUsername = ExcelUtils.getStringData(2, 0, "LoginDetails");
-		String Validpassword = ExcelUtils.getStringData(2, 1, "LoginDetails");
+		//String InValidUsername = ExcelUtils.getStringData(2, 0, "LoginDetails");
+		//String Validpassword = ExcelUtils.getStringData(2, 1, "LoginDetails");
 
 		Login login = new Login(driver);
 		login.enterValidUsername(InValidUsername);
