@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-29T01:05:22 IST" name="Suite" finished-at="2024-08-29T01:05:22 IST" duration-ms="61">
+  <suite started-at="2024-09-03T00:02:22 IST" name="Default suite" finished-at="2024-09-03T00:02:22 IST" duration-ms="40">
     <groups>
     </groups>
-    <test started-at="2024-08-29T01:05:22 IST" name="parameter" finished-at="2024-08-29T01:05:22 IST" duration-ms="61">
+    <test started-at="2024-09-03T00:02:22 IST" name="Default test" finished-at="2024-09-03T00:02:22 IST" duration-ms="40">
       <class name="testscripts.LoginPageTest">
-        <test-method is-config="true" signature="initializeMethod(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4b2bac3f]" started-at="2024-08-29T01:05:22 IST" name="initializeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1724873722084" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="verifyEnterValidUsernameAndValidPassword()[pri:4, instance:testscripts.LoginPageTest@79079097]" started-at="2024-09-03T00:02:22 IST" name="verifyEnterValidUsernameAndValidPassword" data-provider="credentials" finished-at="2024-09-03T00:02:22 IST" duration-ms="11" status="FAIL">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
             <message>
               <![CDATA[
-Parameter 'Browser' is required by BeforeMethod on method initializeMethod but has not been marked @Optional or defined
-in C:\Users\USER\git\7rSuperMarket\7rSupermarketProject\parameter.xml]]>
+[public void testscripts.LoginPageTest.verifyEnterValidUsernameAndValidPassword() throws java.io.IOException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyEnterValidUsernameAndValidPassword([])
+Arguments: [null,null]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'Browser' is required by BeforeMethod on method initializeMethod but has not been marked @Optional or defined
-in C:\Users\USER\git\7rSuperMarket\7rSupermarketProject\parameter.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void testscripts.LoginPageTest.verifyEnterValidUsernameAndValidPassword() throws java.io.IOException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyEnterValidUsernameAndValidPassword([])
+Arguments: [null,null]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:915)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
@@ -49,73 +47,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeMethod -->
-        <test-method signature="verifyEnterInvalidUsernameAndValidPassword(java.lang.String,java.lang.String)[pri:2, instance:testscripts.LoginPageTest@4b2bac3f]" started-at="2024-08-29T01:05:22 IST" name="verifyEnterInvalidUsernameAndValidPassword" finished-at="2024-08-29T01:05:22 IST" duration-ms="1" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin@123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'Browser' is required by BeforeMethod on method initializeMethod but has not been marked @Optional or defined
-in C:\Users\USER\git\7rSuperMarket\7rSupermarketProject\parameter.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'Browser' is required by BeforeMethod on method initializeMethod but has not been marked @Optional or defined
-in C:\Users\USER\git\7rSuperMarket\7rSupermarketProject\parameter.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEnterInvalidUsernameAndValidPassword -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscripts.LoginPageTest@4b2bac3f]" started-at="2024-08-29T01:05:22 IST" name="afterMethod" finished-at="2024-08-29T01:05:22 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
+        </test-method> <!-- verifyEnterValidUsernameAndValidPassword -->
       </class> <!-- testscripts.LoginPageTest -->
-    </test> <!-- parameter -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

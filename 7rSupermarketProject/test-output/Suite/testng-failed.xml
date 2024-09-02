@@ -7,8 +7,8 @@
     <classes>
       <class name="testscripts.LoginPageTest">
         <methods>
-          <include name="afterMethod"/>
           <include name="verifyEnterInvalidUsernameAndValidPassword"/>
+          <include name="browserQuit"/>
           <include name="initializeMethod"/>
         </methods>
       </class> <!-- testscripts.LoginPageTest -->

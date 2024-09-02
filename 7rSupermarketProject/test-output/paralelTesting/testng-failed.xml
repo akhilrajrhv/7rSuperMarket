@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [paralelTesting]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Chrome Test(failed)">
+    <parameter name="password" value="admin"/>
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="username" value="admin"/>
+    <classes>
+      <class name="testscripts.LoginPageTest">
+        <methods>
+          <include name="verifyEnterValidUsernameAndInvalidPassword" invocation-numbers="0"/>
+          <include name="verifyEnterInvalidUsernameAndValidPassword"/>
+          <include name="browserQuit"/>
+          <include name="initializeMethod"/>
+        </methods>
+      </class> <!-- testscripts.LoginPageTest -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [paralelTesting] -->

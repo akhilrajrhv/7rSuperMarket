@@ -5,24 +5,28 @@
     <listener class-name="generateExtendReport.Listeners"/>
   </listeners>
   <test thread-count="5" name="Chrome Test(failed)">
+    <parameter name="password" value="admin"/>
     <parameter name="Browser" value="Chrome"/>
+    <parameter name="username" value="admin"/>
     <classes>
       <class name="testscripts.LoginPageTest">
         <methods>
-          <include name="afterMethod"/>
-          <include name="verifyEnterValidUsernameAndInvalidPassword" invocation-numbers="0"/>
+          <include name="verifyEnterValidUsernameAndValidPassword"/>
+          <include name="browserQuit"/>
           <include name="initializeMethod"/>
         </methods>
       </class> <!-- testscripts.LoginPageTest -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
   <test thread-count="5" name="Edge Test(failed)">
+    <parameter name="password" value="admin"/>
     <parameter name="Browser" value="Edge"/>
+    <parameter name="username" value="admin"/>
     <classes>
       <class name="testscripts.LoginPageTest">
         <methods>
-          <include name="afterMethod"/>
-          <include name="verifyEnterValidUsernameAndInvalidPassword" invocation-numbers="0"/>
+          <include name="verifyEnterValidUsernameAndValidPassword"/>
+          <include name="browserQuit"/>
           <include name="initializeMethod"/>
         </methods>
       </class> <!-- testscripts.LoginPageTest -->

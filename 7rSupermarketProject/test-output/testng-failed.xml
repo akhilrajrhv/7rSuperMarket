@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="Username" value="admin@123"/>
-  <parameter name="Password" value="admin"/>
-  <test thread-count="5" name="parameter(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="testscripts.LoginPageTest">
         <methods>
-          <include name="afterMethod"/>
-          <include name="verifyEnterInvalidUsernameAndValidPassword"/>
+          <include name="verifyEnterValidUsernameAndValidPassword"/>
+          <include name="browserQuit"/>
           <include name="initializeMethod"/>
         </methods>
       </class> <!-- testscripts.LoginPageTest -->
     </classes>
-  </test> <!-- parameter(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

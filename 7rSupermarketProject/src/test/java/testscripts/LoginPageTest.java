@@ -78,7 +78,8 @@ public class LoginPageTest extends BaseClass {
 
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
+	@Test(priority=4,retryAnalyzer = reTry.Retry.class, dataProvider = "credentials")
 	public void verifyEnterValidUsernameAndValidPassword() throws IOException {
 
 		String ValidUsername = ExcelUtils.getStringData(4, 0, "LoginDetails");
