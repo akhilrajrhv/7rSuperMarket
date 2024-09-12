@@ -16,7 +16,7 @@
 				<methods>
 					<include name="verifyEnterValidUsernameAndValidPassword"></include>
 				</methods>
-			</class>
+			</class>	
 		</classes>
 	</test>
 

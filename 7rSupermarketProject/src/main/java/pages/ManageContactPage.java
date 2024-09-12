@@ -31,43 +31,51 @@ public ManageContactPage (WebDriver driver) {
 WaitUtils pagewait=new WaitUtils();
 PageUtils page=new PageUtils();
 
-public void clickmanagecontactlink () {
+public ManageContactPage clickmanagecontactlink () {
 	managecontactlink.click();
+	return this;
 }
 
-public void clickeditcontactbutton () {
+public ManageContactPage clickeditcontactbutton () {
 	editcontactbutoon.click();
+	return this;
 }
 
-public void enterphonenumber (String phoneno) {
+public ManageContactPage enterphonenumber (String phoneno) {
 	phonenofield.clear();
 	phonenofield.sendKeys(phoneno);
+	return this;
 }
 
-public void enteremail (String email) {
+public ManageContactPage enteremail (String email) {
 	emailfield.clear();
 	emailfield.sendKeys(email);
+	return this;
 }
 
-public void enteraddress (String address) {
+public ManageContactPage enteraddress (String address) {
 	addressfield.clear();
 	addressfield.sendKeys(address);
+	return this;
 }
 
-public void enterdeliverytime (String deliverytime) {
+public ManageContactPage enterdeliverytime (String deliverytime) {
 	deliverytimefield.clear();
 	deliverytimefield.sendKeys(deliverytime);
+	return this;
 }
 
-public void enterdeliverycharge (String deliverycharge) {
+public ManageContactPage enterdeliverycharge (String deliverycharge) {
 	deliverychargefield.clear();
 	deliverychargefield.sendKeys(deliverycharge);
 	//page.scrolldown();
+	return this;
 }
 
-public void clickupdatebutton () {
+public ManageContactPage clickupdatebutton () {
 	 pagewait.waitforelement(updatebutton);
 	updatebutton.click();
+	return new ManageContactPage(driver);
 }
 
 public void pagescrolldown() {

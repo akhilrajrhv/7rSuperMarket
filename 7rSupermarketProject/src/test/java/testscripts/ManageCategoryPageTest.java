@@ -8,12 +8,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import constants.Constants;
+import pages.AdminUsersPage;
 import pages.Login;
 import pages.ManageCategoryPage;
+import testscripts.*;
 import utilities.ExcelUtils;
 import utilities.WaitUtils;
 
 public class ManageCategoryPageTest extends BaseClass {
+
+	public Login login;
+	public AdminUsersPage adminuser;
+	public ManageCategoryPage managecategory;
 
 	@Test(priority = 1)
 	public void verifyAddCategory() throws InterruptedException, IOException {
@@ -22,22 +28,15 @@ public class ManageCategoryPageTest extends BaseClass {
 		String Validpassword = ExcelUtils.getStringData(1, 1, "CategoryDetail");
 		String categoryname = ExcelUtils.getStringData(1, 2, "CategoryDetail");
 
+		String adminusername = ExcelUtils.getStringData(1, 2, "AdminUserDetails");
+		String adminpassword = ExcelUtils.getStringData(1, 3, "AdminUserDetails");
+		
 		Login login = new Login(driver);
-		login.enterValidUsername(ValidUsername);
-		login.enterValidPassword(Validpassword);
-		login.clicLoginbutton();
+		adminuser = login.enterValidUsername(ValidUsername).enterValidPassword(Validpassword).clicLoginbutton();
+		managecategory = adminuser.clickadminuserlink().clicknewbutton().enterusername(adminusername).enterpassword(adminpassword).selectuser().clicksavebutton();
+		managecategory = managecategory.navigatedashboard().clickcategorylink().clicknewbutton().entercategoryname(categoryname).selectgroup().selectimage().clicksavebutton();
 
-		ManageCategoryPage categorypage = new ManageCategoryPage(driver);
-		categorypage.clickcategorylink();
-		categorypage.clicknewbutton();
-		categorypage.entercategoryname(categoryname);
-		categorypage.selectgroup();
-		categorypage.selectimage();
-		categorypage.pagescrolldown();
-		Thread.sleep(1000);
-		categorypage.clicksavebutton();
-
-		boolean isCategoryAddAlertShow = categorypage.isCategoryCreatedSuccess();
+		boolean isCategoryAddAlertShow = managecategory.isCategoryCreatedSuccess();
 		assertTrue(isCategoryAddAlertShow, Constants.ERROR_MESSAGEFOR_ADDCATEGORY);
 	}
 

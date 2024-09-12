@@ -11,10 +11,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import constants.Constants;
+import pages.AdminUsersPage;
 import pages.Login;
 import utilities.ExcelUtils;
 
 public class LoginPageTest extends BaseClass {
+	
+	
+
 	
 	@DataProvider(name="credentials")
 	public Object[][] testData() {// data provider
@@ -78,8 +82,8 @@ public class LoginPageTest extends BaseClass {
 
 	}
 
-	//@Test(priority = 4)
-	@Test(priority=4,retryAnalyzer = reTry.Retry.class, dataProvider = "credentials")
+	@Test(priority = 4,retryAnalyzer = reTry.Retry.class,groups = {"Smoke Testing"})
+	
 	public void verifyEnterValidUsernameAndValidPassword() throws IOException {
 
 		String ValidUsername = ExcelUtils.getStringData(4, 0, "LoginDetails");

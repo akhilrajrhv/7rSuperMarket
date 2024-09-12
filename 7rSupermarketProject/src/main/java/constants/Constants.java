@@ -7,6 +7,10 @@ public class Constants {
 	public static final String ERROR_MESSAGEFOR_ADDCATEGORY="Failed!! Category Not Added";
 	public static final String ERROR_MESSAGEFOR_ADDSUBCATEGORY="Failed!! Sub Category Not Created";
 	public static final String ERROR_MESSAGEFOR_UPDATE_CONTACT="Failed!! Contact Details Not Updated";
+	public static final String ERRORFORADMINUSERSEARCH="User not found";
+	public static final String ERRORFORADMINUSERSEARCHDELETE="User not found";
 	public static final String TESTDATAFILE=System.getProperty("user.dir")+"\\src\\test\\resources\\7rSuperMarketTestData.xlsx";
+	public static final String CONFIGFILE=System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties";
+
 	
 }

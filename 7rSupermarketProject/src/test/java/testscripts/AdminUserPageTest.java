@@ -7,31 +7,29 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import pages.AdminUsersPage;
+import pages.ManageCategoryPage;
 import pages.Login;
 import utilities.ExcelUtils;
 
 public class AdminUserPageTest extends BaseClass {
+
+	public Login login;
+	public AdminUsersPage adminuser;
+	public ManageCategoryPage managecategory;
+
 	@Test
 	public void verifyCreateNewAdminUser() throws IOException {
 
-
-		Login login = new Login(driver);
+	
 		String ValidUsername = ExcelUtils.getStringData(1, 0, "AdminUserDetails");
 		String Validpassword = ExcelUtils.getStringData(1, 1, "AdminUserDetails");
-		login.enterValidUsername(ValidUsername);
-		login.enterValidPassword(Validpassword);
-		login.clicLoginbutton();
+		// For chaining(Pass only one driver)
+		login = new Login(driver);
+		adminuser = login.enterValidUsername(ValidUsername).enterValidPassword(Validpassword).clicLoginbutton();
 
-		AdminUsersPage adminuser = new AdminUsersPage(driver);
-		adminuser.clickadminuserlink();
-		adminuser.clicknewbutton();
 		String adminusername = ExcelUtils.getStringData(1, 2, "AdminUserDetails");
 		String adminpassword = ExcelUtils.getStringData(1, 3, "AdminUserDetails");
-		System.out.println("Admin UserName--->"+adminusername);
-		adminuser.enterusername(adminusername);
-		adminuser.enterpassword(adminpassword);
-		adminuser.selectuser();
-		adminuser.clicksavebutton();
+		managecategory = adminuser.clickadminuserlink().clicknewbutton().enterusername(adminusername).enterpassword(adminpassword).selectuser().clicksavebutton();
 
 		boolean isAlerttextshow = adminuser.isalerttextdisplay();
 		assertTrue(isAlerttextshow, "Failed!! Admin User Not Created");

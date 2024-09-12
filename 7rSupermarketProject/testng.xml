@@ -2,15 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="7rSupermarket">
+	  
+	  <parameter name="Browser" value="Chrome"></parameter>
+	  
     <classes>
-		 
-      <class name="testscripts.LoginPageTest">
+		
+      <class name="testscripts.SerchAdminUserPageTest">
      <methods>
-		 <include name="verifyEnterValidUsernameAndInvalidPassword">
+		<!--  <include name="deletedsearchedadminuser">
 			 
-		 </include>
+		 </include> -->
 		  
 	  </methods>
+	
 	</class>
     </classes>
   </test> <!-- 7rSupermarket -->

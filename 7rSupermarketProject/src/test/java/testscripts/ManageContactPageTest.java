@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import constants.Constants;
+import pages.AdminUsersPage;
 import pages.Login;
 import pages.ManageContactPage;
 import utilities.ExcelUtils;
@@ -15,6 +16,11 @@ import utilities.PageUtils;
 import utilities.WaitUtils;
 
 public class ManageContactPageTest extends BaseClass {
+	
+	public Login login;
+	public AdminUsersPage adminuser;
+	public ManageContactPage contact;
+	
 	@Test
 	public void verifyUpdateContact() throws IOException {
 
@@ -45,6 +51,9 @@ public class ManageContactPageTest extends BaseClass {
 		js.executeScript("window.scrollBy(0,150)");
 		contactpage.clickupdatebutton();
 
+		adminuser=login.enterValidUsername(ValidUsername).enterValidPassword(Validpassword).clicLoginbutton();
+		
+		
 		boolean isContactUpdateAlertShow = contactpage.isContactUpdatedSuccess();
 		assertTrue(isContactUpdateAlertShow, Constants.ERROR_MESSAGEFOR_UPDATE_CONTACT);
 	}

@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscripts.LoginPageTest">
+      <class name="testscripts.SerchAdminUserPageTest">
         <methods>
-          <include name="verifyEnterInvalidUsernameAndInvalidPassword"/>
-          <include name="afterMethod"/>
-          <include name="verifyEnterValidUsernameAndValidPassword"/>
-          <include name="verifyEnterValidUsernameAndInvalidPassword"/>
-          <include name="verifyEnterInvalidUsernameAndValidPassword"/>
+          <include name="browserQuit"/>
           <include name="initializeMethod"/>
+          <include name="adminusersearch"/>
         </methods>
-      </class> <!-- testscripts.LoginPageTest -->
+      </class> <!-- testscripts.SerchAdminUserPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

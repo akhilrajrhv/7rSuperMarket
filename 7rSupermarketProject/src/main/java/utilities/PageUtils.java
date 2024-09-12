@@ -21,6 +21,12 @@ public void selectSubCategoryDropDownByValue(WebElement element)
 	select.selectByValue("164");
 }
 
+public void selectUserType(WebElement usertype)
+{
+	Select select=new Select(usertype);
+	select.selectByIndex(2);
+}
+
 public void scrolldown() {
 	JavascriptExecutor js=(JavascriptExecutor) driver;
 	js.executeScript("window.scrollBy(0,150)");

@@ -13,7 +13,8 @@ public class AdminUsersPage {
 	
 	
 	WebDriver driver;
-
+	PageUtils page=new PageUtils();
+	
 public AdminUsersPage (WebDriver driver) {
 		
 		this.driver=driver;
@@ -31,31 +32,37 @@ public AdminUsersPage (WebDriver driver) {
 
 
 
- PageUtils page=new PageUtils();
  
- public void clickadminuserlink() {
+ 
+ public AdminUsersPage clickadminuserlink() {
 		adminuserlink.click();
+		return this;
 	}
- public void clicknewbutton() {
+ public AdminUsersPage clicknewbutton() {
 		newbutton.click();
+		return this;
 	}
  
- public void enterusername(String adminname) {
+ public AdminUsersPage enterusername(String adminname) {
 		username.sendKeys(adminname);
+		return this;
 	}
- public void enterpassword(String adminpassword) {
+ public AdminUsersPage enterpassword(String adminpassword) {
 		password.sendKeys(adminpassword);
+		return this;
 	}
  
- public void selectuser() {
+ public AdminUsersPage selectuser() {
 	 	//Select select = new Select(driver.findElement(By.xpath("//select[@id='user_type']")));
 	 	//select.selectByIndex(2);
 	 	page.selectAdminUsertypeDropDownByIndex(usertype);
+		return this;
 		
 	}
  
- public void clicksavebutton() {
+ public ManageCategoryPage clicksavebutton() {
 		savebutton.click();
+		return new ManageCategoryPage(driver);
 	}
  
  public boolean isalerttextdisplay() {

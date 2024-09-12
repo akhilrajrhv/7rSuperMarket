@@ -37,36 +37,51 @@ public class ManageCategoryPage {
 	WebElement updatecategorybutton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement categoryaddsuccssAlert;
+	@FindBy(xpath = "//span[@class='brand-text font-weight-light']")
+	WebElement navigateto_dashboard;
+	
 	String filepath = "C:\\Users\\USER\\Desktop\\Test Images\\testimage.jpg";
 
 	WaitUtils pagewait = new WaitUtils();
 	
 
-	public void clickcategorylink() {
+	public ManageCategoryPage clickcategorylink() {
 		clickcategory.click();
+		return this;
 	}
 
-	public void clicknewbutton() {
+	public ManageCategoryPage clicknewbutton() {
 		clicknewbutton.click();
+		return this;
 	}
 
-	public void entercategoryname(String name) {
+	public ManageCategoryPage entercategoryname(String name) {
 		categoryfield.sendKeys(name);
+		return this;
 	}
 
-	public void selectgroup() {
+	public ManageCategoryPage selectgroup() {
 		selectgroup.click();
+		return this;
 	}
 
-	public void selectimage() {
+	public ManageCategoryPage selectimage() {
 		//selectimage.sendKeys(filepath);
 		FileUploadUtils.uploadImage(selectimage, filepath);
+		return this;
 
 	}
 
-	public void clicksavebutton() {
+	public ManageCategoryPage clicksavebutton() {
 		pagewait.waitforelement(savebutton);
 		savebutton.click();
+		return this ;
+	}
+	
+	public ManageCategoryPage navigatedashboard() {
+		
+		navigateto_dashboard.click();
+		return this;
 	}
 	
 	public void clickeditbutton() {
